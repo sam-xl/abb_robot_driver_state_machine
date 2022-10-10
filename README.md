@@ -1,5 +1,7 @@
 # ABB Robot Driver State Machine
-TODO: Add badges (build status, license)
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)  
+
+![](./resources/abb_irb4600_with_camera.jpg)
 
 > :warning: **Please first verify if your setup is working with the examples provided by the `abb_robot_driver` package before using this package, specifically: [`ex2_rws_and_egm_6axis_robot`](https://github.com/ros-industrial/abb_robot_driver/tree/master/abb_robot_bringup_examples#example-2-ex2_rws_and_egm_6axis_robot).**
 
