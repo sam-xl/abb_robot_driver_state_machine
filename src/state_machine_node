@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+from abb_robot_driver_state_machine import ABBRobotDriverManagerSM
+
+if __name__ == "__main__":
+    driver_sm = ABBRobotDriverManagerSM()
+    driver_sm.execute()
