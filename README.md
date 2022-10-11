@@ -68,7 +68,7 @@ Use `vcstool` to clone other project packages and complete the project workspace
 
 Install the dependencies of the cloned packages using `rosdep`:
 
-    rosdep install --from-paths src --ignore-src -r -y
+    rosdep install --from-paths src --ignore-src -y
 
 Finally, build all packages in the workspace:
 
