@@ -5,7 +5,7 @@
   <description>The abb_robot_driver_state_machine package</description>
 
   <maintainer email="d.kroezen@tudelft.nl">Dave Kroezen (SAM|XL)</maintainer>
-  <license>BSD3</license>
+  <license>BSD-3-Clause</license>
 
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>abb_egm_msgs</exec_depend>
