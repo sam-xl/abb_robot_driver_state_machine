@@ -79,14 +79,18 @@ After starting the `abb_robot_driver`, the state machine can be launched by usin
 
     roslaunch abb_robot_driver_state_machine state_machine_bringup.launch
 
+It is also possible to provide an EGM settings file:
+
+    roslaunch abb_robot_driver_state_machine state_machine_bringup.launch egm_settings:="/path/to/egm_settings.yaml"
+
 ## Config files
 The user can specify the requested EGM settings by providing a config file with the settings to either the node or the launch file. 
 
-- `./config/egm_settings_abb_irb1200.yaml`  
-  EGM settings to set the `max_speed_deviation` from the default value (configured on the IRC5 controller) to `100.0`. 
-
 - `./config/20220812_egm_settings_dump_abb_irb1200.yaml`  
-  A dump of the EGM settings of an ABB IRB1200 with an increased `max_speed_deviation`. Increase `max_speed_deviation` if you require even faster joint velocities (the value is in `deg/s`).
+  A dump of the EGM settings of an ABB IRB1200. This dump can be used as a reference to see which settings there are and what can be configured. It can also be used as a first input for your settings. Increase `max_speed_deviation` if you require faster joint velocities (the value is in `deg/s`).
+
+- `./config/increased_speed_egm_settings.yaml`  
+  An EGM settings file to set the `max_speed_deviation` from the default value (configured on the IRC5 controller) to `100.0`.
 
 If no config file is proved the default EGM settings are used as specified on the IRC5 controller. The settings in the config files are only applied for the next session and are not persistent. 
 
