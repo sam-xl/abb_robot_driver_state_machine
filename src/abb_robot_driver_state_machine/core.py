@@ -58,7 +58,7 @@ class ABBRobotDriverManager:
     def __init__(self) -> None:
         # Retrieve ROS parameters
         self.rws_namespace = rospy.get_param("rws_namespace", default=self.RWS_NAMESPACE)
-        self.egm_namespace = rospy.get_param("egm_namespace", self.EGM_NAMEPSACE)
+        self.egm_namespace = rospy.get_param("egm_namespace", default=self.EGM_NAMEPSACE)
         self.taskname = rospy.get_param("taskname", default=self.TASKNAME)
 
     def initialize(self) -> None:
