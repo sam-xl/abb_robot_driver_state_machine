@@ -1,8 +1,8 @@
 <launch>
     <arg name="egm_settings" default="" doc="The filename (including path) of the file containing the EGM settings to apply for each EGM session." />
     <arg name="taskname" default="T_ROB1" doc="The name of the RAPID task which is running the 'StateMachine Add-In'" />
-    <arg name="rws_namespace" default="/rws" doc="Namespace of the RWS services and topics to be used by the state machine" />
-    <arg name="egm_namespace" default="/egm" doc="Namespace of the EGM services and topics to be used by the state machine" />
+    <arg name="rws_namespace" default="rws" doc="Namespace of the RWS services and topics to be used by the state machine" />
+    <arg name="egm_namespace" default="egm" doc="Namespace of the EGM services and topics to be used by the state machine" />
     
     <param name="egm_settings" value="$(arg egm_settings)"/>
     <param name="taskname" value="$(arg taskname)"/>
