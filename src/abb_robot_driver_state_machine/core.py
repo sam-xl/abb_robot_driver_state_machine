@@ -54,18 +54,20 @@ class ABBRobotDriverManager:
     TASKNAME = "T_ROB1"
     RWS_NAMESPACE = "/rws"
     EGM_NAMEPSACE = "/egm"
+    WAIT_FOR_SERVICE_TIMEOUT=5
 
     def __init__(self) -> None:
         # Retrieve ROS parameters
         self.rws_namespace = rospy.get_param("rws_namespace", default=self.RWS_NAMESPACE)
         self.egm_namespace = rospy.get_param("egm_namespace", default=self.EGM_NAMEPSACE)
         self.taskname = rospy.get_param("taskname", default=self.TASKNAME)
+        self.wait_for_service_timeout = rospy.get_param("wait_for_service_timeout", default=self.WAIT_FOR_SERVICE_TIMEOUT)
 
     def initialize(self) -> None:
         """Creates service handles for the ABB/EGM services and reads the egm settings file if provided"""
 
         # Set up services
-        self._create_services(timeout=5)
+        self._create_services(timeout=self.wait_for_service_timeout)
 
         # Load settings from YAML
         filename = rospy.get_param("egm_settings", "")
