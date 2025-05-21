@@ -3,10 +3,12 @@
     <arg name="taskname" default="T_ROB1" doc="The name of the RAPID task which is running the 'StateMachine Add-In'" />
     <arg name="rws_namespace" default="rws" doc="Namespace of the RWS services and topics to be used by the state machine" />
     <arg name="egm_namespace" default="egm" doc="Namespace of the EGM services and topics to be used by the state machine" />
+    <arg name="wait_for_service_timeout" default="5" doc="Timeout for connecting to the EGM and RWS services during initialization of the state-machine." />
     
     <param name="egm_settings" value="$(arg egm_settings)"/>
     <param name="taskname" value="$(arg taskname)"/>
     <param name="rws_namespace" value="$(arg rws_namespace)"/>
     <param name="egm_namespace" value="$(arg egm_namespace)"/>
+    <param name="wait_for_service_timeout" value="$(arg wait_for_service_timeout)"/>
     <node name="abb_robot_driver_state_machine" pkg="abb_robot_driver_state_machine" type="state_machine_node"/>
 </launch>
